@@ -1,0 +1,20 @@
+import java.lang.*;
+import java.util.Scanner;
+class Main
+{
+    public static void main(String args[])
+    {
+       System.out.println("Enter initial speed");
+       Scanner sc=new Scanner(System.in);
+       double u,a,t;
+       u=sc.nextDouble();
+        System.out.println("Enter acceleration");
+       a=sc.nextDouble();
+       System.out.println("Enter Time Period");
+       t=sc.nextDouble();
+       double d;
+        d=u*t+(a*t*t)/2;
+       System.out.println("Distance is "+d);
+
+    }
+}

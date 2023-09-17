@@ -1,0 +1,26 @@
+import java.lang.*;
+import java.util.*;
+class Main
+{
+    static boolean isPalindrome(int p)
+    {
+        int rev=0;
+        int last_digit;
+        int x=p;
+        while(x!=0)
+        {
+           last_digit=x%10;
+           rev=rev*10+last_digit;
+           x=x/10;
+        }
+        return (rev==p);
+    }
+ public static void main(String args[])
+ {
+     Scanner s=new Scanner (System.in);
+     System.out.println("Enter Number");
+     int n;
+     n=s.nextInt();
+     System.out.println(isPalindrome(n));
+ }
+}

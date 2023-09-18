@@ -1,0 +1,35 @@
+import java.lang.*;
+import java.util.*;
+class Main {
+    public static void main(String args[]) {
+        System.out.println("Enter String");
+        Scanner s = new Scanner(System.in);
+        String str;
+        str = s.nextLine();
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'A') {
+                count++;
+            } else if (str.charAt(i) == 'E') {
+                count++;
+            } else if (str.charAt(i) == 'I') {
+                count++;
+            } else if (str.charAt(i) == 'O') {
+                count++;
+            } else if (str.charAt(i) == 'U') {
+                count++;
+            } else if (str.charAt(i) == 'a') {
+                count++;
+            } else if (str.charAt(i) == 'e') {
+                count++;
+            } else if (str.charAt(i) == 'i') {
+                count++;
+            } else if (str.charAt(i) == 'o') {
+                count++;
+            } else if (str.charAt(i) == 'u') {
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+}

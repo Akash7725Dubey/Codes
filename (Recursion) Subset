@@ -1,0 +1,30 @@
+import java.lang.*;
+import java.util.*;
+class Main
+{
+    static void Subset(String str,int i,String curr)
+    {
+        int count=0;
+        int n=str.length();
+
+        if(i==n)
+        {
+            System.out.println(curr);
+
+            return ;
+        }
+        Subset(str,i+1,curr+str.charAt(i));
+        Subset(str,i+1,curr);
+
+    }
+    public static void main(String args[])
+    {
+        System.out.println("Enter String");
+        Scanner s=new Scanner(System.in);
+        String str;
+        str=s.next();
+        int index=0;
+        String curr="";
+        Subset(str,index,curr);
+    }
+}

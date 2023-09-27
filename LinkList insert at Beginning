@@ -1,0 +1,44 @@
+import java.lang.*;
+class Node
+{
+    int data;
+    Node next;
+    Node(int x)
+    {
+        data=x;
+        next=null;
+    }
+}
+class LinkList
+{
+    Node head;
+    public void insertAtBegin(int data)
+    {
+        Node newnode=new Node (data);
+        newnode.next=head;
+        head=newnode;
+    }
+    public void PrintList()
+    {
+        Node curr=head;
+        while(curr!=null)
+        {
+            System.out.println(curr.data+"");
+            curr=curr.next;
+        }
+    }
+
+}
+class Main
+{
+    public static void main(String args[])
+    {
+        LinkList list=new LinkList();
+        list.insertAtBegin(10);
+        list.insertAtBegin(20);
+        list.insertAtBegin(30);
+        list.insertAtBegin(40);
+        list.PrintList();
+
+    }
+}

@@ -1,0 +1,33 @@
+import java.lang.*;
+class Node
+{
+    int data;
+    Node next;
+    Node(int x)
+    {
+        data=x;
+        next=null;
+    }
+}
+class Main
+{
+
+    public static void Printlist(Node head)
+    {
+        Node curr=head;
+        if(curr!=null)
+        {
+            System.out.println(curr.data+"");
+            curr=curr.next;
+            Printlist(curr);
+        }
+    }
+    public static void main(String args[])
+    {
+        Node head=new Node(10);
+        head.next=new Node(20);
+        head.next.next=new Node(30);
+        head.next.next.next=new Node(20);
+        Printlist(head);
+    }
+}

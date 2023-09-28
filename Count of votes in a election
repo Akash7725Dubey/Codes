@@ -1,0 +1,54 @@
+import java.lang.*;
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        System.out.println("Enter Number of voters");
+
+        Scanner s=new Scanner(System.in);
+        int n;
+        n=s.nextInt();
+
+        char a[]=new char[n];
+       int count[]=new int[5];
+        for(int i=0;i<n;i++)
+        {
+            System.out.println("Enter your vote from A,B,C,D,E");
+            System.out.println("voter "+(i+1)+" ");
+            String x;
+            x=s.next();
+            Countvote(x,count);
+        }
+        System.out.println("Votes of A "+count[0]);
+        System.out.println("Votes of B "+count[1]);
+        System.out.println("Votes of C "+count[2]);
+        System.out.println("Votes of D "+count[3]);
+        System.out.println("Votes of E "+count[4]);
+
+    }
+    static void Countvote(String y,int count[])
+    {
+        if(y.equals("A"))
+        {
+            count[0]++;
+        }
+        else if(y.equals("B"))
+        {
+            count[1]++;
+        }
+        else if(y.equals("C"))
+        {
+            count[2]++;
+        }
+        else if(y.equals("D"))
+        {
+            count[3]++;
+        }
+        else if(y.equals("E"))
+        {
+            count[4]++;
+        }
+
+    }
+}

@@ -1,0 +1,43 @@
+import java.lang.*;
+class Node
+{
+    Node left;
+    Node right;
+    int data;
+    Node(int x)
+    {
+        data=x;
+    }
+}
+class Main
+{
+    static void PrintkDist(Node root,int k)
+    {
+        if(root==null)
+
+            return;
+
+        if(k==0)
+
+            System.out.println(root.data+"");
+        
+        else {
+            PrintkDist(root.left,k-1);
+            PrintkDist(root.right,k-1);
+        }
+
+    }
+    public static void main(String args[])
+    {
+        Node root=new Node(10);
+        root.left=new Node(20);
+        root.right=new Node(30);
+        root.left.left=new Node(40);
+        root.right.left=new Node(50);
+        root.right.right=new Node(70);
+        root.right.right.right=new Node(80);
+        int k=2;
+        PrintkDist(root,k);
+
+    }
+}
